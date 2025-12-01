@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CS & iMedia Career Quest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="careers-quest-style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="app-header">
+            <div class="logo-block">
+                <div class="logo-icon">CQ</div>
+                <div class="logo-text">
+                    <h1>CS &amp; iMedia Career Quest</h1>
+                    <p class="tagline">Discover future pathways that match what you enjoy and what you're great at.</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="app-main">
+            <!-- Start Screen -->
+            <section id="start-screen" class="card active">
+                <h2>Ready to unlock your future?</h2>
+                <p class="intro-text">
+                    Answer a few quick questions about what you like and how you like to work. 
+                    We'll match you with careers in <strong>Computer Science</strong> and <strong>iMedia</strong>, 
+                    showing you typical <strong>skills</strong>, <strong>qualifications</strong> and <strong>salary ranges</strong>.
+                </p>
+
+                <div class="pill-row">
+                    <span class="pill">No right or wrong answers</span>
+                    <span class="pill">Takes about 3–5 minutes</span>
+                    <span class="pill">Get your own career passport</span>
+                </div>
+
+                <button id="start-btn" class="btn primary-btn">
+                    Start Career Quest
+                </button>
+            </section>
+
+            <!-- Quiz Screen -->
+            <section id="quiz-screen" class="card hidden">
+                <div class="quiz-header">
+                    <div class="quiz-progress">
+                        <div class="progress-label">
+                            Question <span id="question-number">1</span> / <span id="total-questions">10</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div id="progress-fill"></div>
+                        </div>
+                    </div>
+                    <div class="profile-hints">
+                        <div class="hint-chip">
+                            <span class="hint-label">Logical / Tech</span>
+                            <div class="hint-bar">
+                                <div id="bar-tech"></div>
+                            </div>
+                        </div>
+                        <div class="hint-chip">
+                            <span class="hint-label">Creative / Visual</span>
+                            <div class="hint-bar">
+                                <div id="bar-creative"></div>
+                            </div>
+                        </div>
+                        <div class="hint-chip">
+                            <span class="hint-label">Security / Data</span>
+                            <div class="hint-bar">
+                                <div id="bar-security"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-area">
+                    <h2 id="question-text"></h2>
+                    <p id="question-helper" class="question-helper"></p>
+                    <div id="options-container" class="options-grid">
+                        <!-- Option buttons injected by JS -->
+                    </div>
+                </div>
+
+                <div class="quiz-footer">
+                    <button id="back-btn" class="btn ghost-btn" disabled>Back</button>
+                    <button id="skip-btn" class="btn ghost-btn">Skip</button>
+                </div>
+            </section>
+
+            <!-- Results Screen -->
+            <section id="result-screen" class="card hidden">
+                <div class="result-header">
+                    <h2>Your Career Quest Results</h2>
+                    <p id="result-summary" class="result-summary"></p>
+                    <div class="result-tags" id="result-tags"></div>
+                </div>
+
+                <div class="result-columns">
+                    <section class="result-panel">
+                        <h3>Your Profile</h3>
+                        <ul id="profile-list" class="profile-list"></ul>
+                    </section>
+
+                    <section class="result-panel careers-panel">
+                        <h3>Matched Careers in CS &amp; iMedia</h3>
+                        <p class="careers-intro">
+                            These roles are a strong match for your answers. Click a card to see typical
+                            qualifications, skills and salary ranges.
+                        </p>
+                        <div id="careers-container" class="careers-grid">
+                            <!-- Career cards injected by JS -->
+                        </div>
+                    </section>
+                </div>
+
+                <div class="result-actions">
+                    <button id="print-btn" class="btn secondary-btn">Print / Save Career Passport</button>
+                    <button id="retry-btn" class="btn primary-btn">Try Again</button>
+                </div>
+
+                <section class="extra-info">
+                    <h3>Next steps you can take <span class="muted">(right now in school)</span></h3>
+                    <ul id="next-steps-list" class="next-steps-list"></ul>
+                </section>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <p>CS &amp; iMedia Career Quest &middot; Built for future technologists and creators</p>
+        </footer>
+    </div>
+
+    <script src="careers-quest-game.js"></script>
+</body>
+</html>
